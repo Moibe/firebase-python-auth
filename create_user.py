@@ -20,6 +20,8 @@ def get_email_arg():
 def create_user(email: str, user_id: Optional[str]) -> UserRecord:
     return auth.create_user(email=email, uid=user_id) if user_id else auth.create_user(email=email)
 
+auth.create_user()
+
 
 if __name__ == "__main__":
     arg = get_email_arg()
